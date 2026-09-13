@@ -7,7 +7,7 @@ github_user: TheVasconcelos
 leetcode_user: TheVasconcelos
 
 # Flip to true once you are happy with the numbers (~50 solved).
-leetcode_enabled: true
+leetcode_enabled: false
 
 # Accent: teal. Change here and the cards follow.
 # Progress bar glyphs: bars (recommended), dots, blocks
