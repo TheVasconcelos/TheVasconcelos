@@ -19,9 +19,11 @@ accountable for.
   <img src="assets/languages.svg" alt="Technology footprint" height="184">
 </p>
 
+<!-- Flip leetcode_enabled to true in profile.yml
 <p align="center">
   <img src="https://leetcard.jacoblin.cool/TheVasconcelos?theme=light,dark&ext=activity" alt="LeetCode stats" width="500">
 </p>
+-->
 <!-- CARDS:END -->
 
 ---
