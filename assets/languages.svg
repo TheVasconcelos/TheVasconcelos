@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 120" width="430" height="120" role="img" aria-label="Technology footprint">
+  <style>
+    .bg { fill: #fbfbfa; }
+    .fr { stroke: #16150f; opacity: .22; stroke-width: 1; fill: none; }
+    .ti { fill: #0F6E56; font-family: ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 1.6px; }
+    .lb { fill: #16150f; opacity: .72; font-family: ui-monospace, Menlo, monospace; font-size: 11.5px; }
+    .vl { fill: #16150f; font-family: ui-monospace, Menlo, monospace; font-size: 13px; }
+    .rl { stroke: #16150f; opacity: .12; stroke-width: 1; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; }
+      .fr { stroke: #f2f0ec; opacity: .18; }
+      .ti { fill: #5DCAA5; }
+      .lb { fill: #f2f0ec; opacity: .62; }
+      .vl { fill: #f2f0ec; }
+      .rl { stroke: #f2f0ec; opacity: .14; }
+    }
+  </style>
+  <rect class="bg" width="430" height="120"/>
+  <text class="ti" x="24" y="34">TECHNOLOGY FOOTPRINT</text>
+  <path class="rl" d="M24 46 L406 46"/>
+  <text class="lb" x="24" y="78">No public repositories yet</text>
+  <rect class="fr" x=".6" y=".6" width="428.8" height="118.8"/>
+</svg>
