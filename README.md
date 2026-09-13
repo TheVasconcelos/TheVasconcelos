@@ -41,8 +41,8 @@ engineering to understand what the teams I manage actually build.
 <!-- BOARD:START -->
 | Project | Track | Progress | Current Status |
 |---|---|:---:|---|
-| [**42 Common Core**](https://github.com/TheVasconcelos) | Education | `█░░░░░░░░░` 12% | Milestone 2 |
-| **Computer Engineering** | Education | `██░░░░░░░░` 20% | 2nd Semester |
+| [**42 Common Core**](https://github.com/TheVasconcelos) | Education | ▰▱▱▱▱▱▱▱▱▱ 12% | Milestone 2 |
+| **Computer Engineering** | Education | ▰▰▱▱▱▱▱▱▱▱ 20% | 2nd Semester |
 <!-- BOARD:END -->
 
 ---
