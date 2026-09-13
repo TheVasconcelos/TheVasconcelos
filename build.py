@@ -6,6 +6,8 @@ import re
 import sys
 import yaml
 
+import cards
+
 ROOT = Path(__file__).resolve().parent
 README = ROOT / "README.md"
 DATA = ROOT / "profile.yml"
@@ -26,9 +28,10 @@ def bar(pct: int, style: str = "bars") -> str:
 
 
 def build_stack(cfg) -> str:
-    rows = ["| | |", "|---|---|"]
+    rows = ["<div align=\"center\">", "", "| | |", "|---|---|"]
     for category, tools in cfg["toolstack"].items():
         rows.append(f"| **{category}** | {' · '.join(tools)} |")
+    rows += ["", "</div>"]
     return "\n".join(rows)
 
 
@@ -49,23 +52,26 @@ def build_board(cfg) -> str:
 
 
 def build_cards(cfg) -> str:
-    user, accent, muted = cfg["github_user"], cfg["accent"], cfg["muted"]
-    common = (
-        f"hide_border=true&bg_color=00000000"
-        f"&title_color={accent}&icon_color={accent}&text_color={muted}"
-    )
-    stats = (
-        f"https://github-readme-stats.vercel.app/api"
-        f"?username={user}&hide=stars&show_icons=true&{common}"
-    )
-    langs = (
-        f"https://github-readme-stats.vercel.app/api/top-langs/"
-        f"?username={user}&layout=compact&langs_count=6&{common}"
-    )
+    """Regenerate the local SVG cards, then return the markup that shows them."""
+    user = cfg["github_user"]
+    assets = ROOT / "assets"
+    assets.mkdir(exist_ok=True)
+
+    try:
+        (assets / "stats.svg").write_text(
+            cards.render_stats(cards.fetch_stats(user)), encoding="utf-8"
+        )
+        (assets / "languages.svg").write_text(
+            cards.render_languages(cards.fetch_languages(user)), encoding="utf-8"
+        )
+        print("cards regenerated")
+    except Exception as exc:  # keep the previous cards rather than breaking
+        print(f"warning: could not refresh cards ({exc}); keeping existing files")
+
     out = [
-        "<p align=\"center\">",
-        f"  <img src=\"{stats}\" alt=\"GitHub stats\" height=\"165\">",
-        f"  <img src=\"{langs}\" alt=\"Technology footprint\" height=\"165\">",
+        '<p align="center">',
+        '  <img src="assets/stats.svg" alt="GitHub activity" height="184">',
+        '  <img src="assets/languages.svg" alt="Technology footprint" height="184">',
         "</p>",
     ]
 
@@ -74,16 +80,15 @@ def build_cards(cfg) -> str:
         f"?theme=light,dark&ext=activity"
     )
     line = (
-        f"<p align=\"center\">\n"
-        f"  <img src=\"{leet}\" alt=\"LeetCode stats\" width=\"500\">\n"
+        f'<p align="center">\n'
+        f'  <img src="{leet}" alt="LeetCode stats" width="500">\n'
         f"</p>"
     )
+    out.append("")
     if cfg.get("leetcode_enabled"):
-        out.append("")
         out.append(line)
     else:
-        out.append("")
-        out.append("<!-- Flip leetcode_enabled to true in data/profile.yml")
+        out.append("<!-- Flip leetcode_enabled to true in profile.yml")
         out.append(line)
         out.append("-->")
     return "\n".join(out)

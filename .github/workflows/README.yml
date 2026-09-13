@@ -7,6 +7,7 @@ on:
     paths:
       - profile.yml
       - build.py
+      - cards.py
       - .github/workflows/readme.yml
   workflow_dispatch:
 
@@ -33,14 +34,16 @@ jobs:
         run: pip install pyyaml
 
       - name: Regenerate README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python build.py
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain README.md)" ]; then
-            git add README.md
+          if [ -n "$(git status --porcelain README.md assets)" ]; then
+            git add README.md assets
             git commit -m "chore(readme): regenerate from profile data"
             git push
           else
