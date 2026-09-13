@@ -2,16 +2,16 @@
   <img src="assets/header.svg" alt="Mariana Vasconcelos — Software Project Manager" width="100%">
 </p>
 
-### Software Project Manager — healthcare software, EU MDR
+### Software Project Manager - healthcare software, EU MDR
 
 I started out in Accounting, then moved into project management. Today I lead a
 team delivering software for hospitals internationally — including one medical
-device regulated under EU MDR, where a requirement without a trace isn't untidy,
-it's a regulatory finding.
+device regulated under EU MDR.
 
 Alongside that, I'm taking a degree in Computer Engineering and studying at
-42 Lisboa, so my technical judgement keeps pace with the decisions I'm already
+42 Lisbon, so my technical judgement keeps pace with the decisions I'm already
 accountable for.
+
 
 <!-- CARDS:START -->
 <p align="center">
@@ -52,7 +52,7 @@ accountable for.
 | Project | Track | Progress | Current Status |
 |---|---|:---:|---|
 | [**42 Common Core**](https://github.com/TheVasconcelos/42-Python-CC) | Education | ▰▰▱▱▱▱▱▱▱▱ 19% | Milestone 2 |
-| **Computer Engineering** | Education | ▰▰▱▱▱▱▱▱▱▱ 20% | 2nd Semester |
+| **BSc Computer Engineering ** | Education | ▰▰▱▱▱▱▱▱▱▱ 20% | 2nd Semester |
 <!-- BOARD:END -->
 
 ---
