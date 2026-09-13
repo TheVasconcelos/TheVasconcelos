@@ -19,7 +19,7 @@
   <text class="ti" x="24" y="34">GITHUB ACTIVITY</text>
   <path class="rl" d="M24 46 L406 46"/>
   <text class="lb" x="24" y="72">Repositories</text>
-  <text class="vl" x="406" y="72" text-anchor="end">0</text>
+  <text class="vl" x="406" y="72" text-anchor="end">5</text>
   <text class="lb" x="24" y="100">Pull requests</text>
   <text class="vl" x="406" y="100" text-anchor="end">0</text>
   <text class="lb" x="24" y="128">Issues</text>
