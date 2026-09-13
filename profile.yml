@@ -26,7 +26,7 @@ toolstack:
 projects:
   - name: 42 Common Core
     track: Education
-    progress: 12
+    progress: 19  # 271h of 1453h 
     status: Milestone 2
     url: https://github.com/TheVasconcelos/42-Python-CC
 

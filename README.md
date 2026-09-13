@@ -51,7 +51,7 @@ accountable for.
 <!-- BOARD:START -->
 | Project | Track | Progress | Current Status |
 |---|---|:---:|---|
-| [**42 Common Core**](https://github.com/TheVasconcelos/42-Python-CC) | Education | ▰▱▱▱▱▱▱▱▱▱ 12% | Milestone 2 |
+| [**42 Common Core**](https://github.com/TheVasconcelos/42-Python-CC) | Education | ▰▰▱▱▱▱▱▱▱▱ 19% | Milestone 2 |
 | **Computer Engineering** | Education | ▰▰▱▱▱▱▱▱▱▱ 20% | 2nd Semester |
 <!-- BOARD:END -->
 

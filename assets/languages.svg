@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 150" width="430" height="150" role="img" aria-label="Technology footprint">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 120" width="430" height="120" role="img" aria-label="Technology footprint">
   <style>
     .bg { fill: #fbfbfa; }
     .fr { stroke: #16150f; opacity: .22; stroke-width: 1; fill: none; }
@@ -15,17 +15,9 @@
       .rl { stroke: #f2f0ec; opacity: .14; }
     }
   </style>
-  <rect class="bg" width="430" height="150"/>
+  <rect class="bg" width="430" height="120"/>
   <text class="ti" x="24" y="34">TECHNOLOGY FOOTPRINT</text>
   <path class="rl" d="M24 46 L406 46"/>
-  <rect x="24.0" y="62" width="272.2" height="9" rx="3" fill="#0F6E56"/>
-  <rect x="296.2" y="62" width="104.2" height="9" fill="#1D9E75"/>
-  <rect x="400.5" y="62" width="5.5" height="9" rx="3" fill="#3FBB93"/>
-  <circle cx="28" cy="100" r="4" fill="#0F6E56"/>
-  <text class="lb" x="40" y="104">Python 71.26%</text>
-  <circle cx="228" cy="100" r="4" fill="#1D9E75"/>
-  <text class="lb" x="240" y="104">C 27.29%</text>
-  <circle cx="28" cy="124" r="4" fill="#3FBB93"/>
-  <text class="lb" x="40" y="128">Makefile 1.45%</text>
-  <rect class="fr" x=".6" y=".6" width="428.8" height="148.8"/>
+  <text class="lb" x="24" y="78">No public repositories yet</text>
+  <rect class="fr" x=".6" y=".6" width="428.8" height="118.8"/>
 </svg>
