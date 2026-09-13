@@ -2,10 +2,16 @@
   <img src="assets/header.svg" alt="Mariana Vasconcelos — Software Project Manager" width="100%">
 </p>
 
-### Software Project Manager — medical device software under EU MDR
+### Software Project Manager — healthcare software, EU MDR
 
-I came to software through accounting and project management. I'm studying computer
-engineering to understand what the teams I manage actually build.
+I started out in Accounting, then moved into project management. Today I lead a
+team delivering software for hospitals internationally — including one medical
+device regulated under EU MDR, where a requirement without a trace isn't untidy,
+it's a regulatory finding.
+
+Alongside that, I'm taking a degree in Computer Engineering and studying at
+42 Lisboa, so my technical judgement keeps pace with the decisions I'm already
+accountable for.
 
 <!-- CARDS:START -->
 <p align="center">
@@ -13,11 +19,9 @@ engineering to understand what the teams I manage actually build.
   <img src="assets/languages.svg" alt="Technology footprint" height="184">
 </p>
 
-<!-- Flip leetcode_enabled to true in profile.yml
 <p align="center">
   <img src="https://leetcard.jacoblin.cool/TheVasconcelos?theme=light,dark&ext=activity" alt="LeetCode stats" width="500">
 </p>
--->
 <!-- CARDS:END -->
 
 ---
