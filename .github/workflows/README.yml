@@ -36,6 +36,7 @@ jobs:
       - name: Regenerate README
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
         run: python build.py
 
       - name: Commit if changed

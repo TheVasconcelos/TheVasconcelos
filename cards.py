@@ -24,11 +24,36 @@ def _get(path: str) -> dict:
             "Accept": "application/vnd.github+json",
         },
     )
-    token = os.environ.get("GITHUB_TOKEN")
+    token = _token()
     if token:
         req.add_header("Authorization", f"Bearer {token}")
     with urllib.request.urlopen(req, timeout=30) as resp:
         return json.load(resp)
+
+
+def _token() -> str | None:
+    """STATS_TOKEN sees private repos; GITHUB_TOKEN only sees public data."""
+    return os.environ.get("STATS_TOKEN") or os.environ.get("GITHUB_TOKEN")
+
+
+def _all_repos(user: str) -> list[dict]:
+    """Every repo the user owns, private included when STATS_TOKEN is set."""
+    private = bool(os.environ.get("STATS_TOKEN"))
+    base = (
+        "/user/repos?affiliation=owner&visibility=all"
+        if private
+        else f"/users/{user}/repos?type=owner"
+    )
+    repos, page = [], 1
+    while page <= 10:
+        batch = _get(f"{base}&per_page=100&page={page}")
+        if not batch:
+            break
+        repos.extend(batch)
+        if len(batch) < 100:
+            break
+        page += 1
+    return repos
 
 
 def _count(query: str) -> int:
@@ -38,10 +63,10 @@ def _count(query: str) -> int:
 
 def fetch_stats(user: str) -> dict:
     profile = _get(f"/users/{user}")
-    stats = {
-        "Repositories": profile["public_repos"],
-        "Followers": profile["followers"],
-    }
+    repos = profile["public_repos"] + profile.get("total_private_repos", 0)
+    if os.environ.get("STATS_TOKEN"):
+        repos = len(_all_repos(user))
+    stats = {"Repositories": repos, "Followers": profile["followers"]}
     try:
         stats["Pull requests"] = _count(f"author:{user} type:pr")
         stats["Issues"] = _count(f"author:{user} type:issue")
@@ -51,7 +76,7 @@ def fetch_stats(user: str) -> dict:
 
 
 def fetch_languages(user: str, top: int = 6) -> list[tuple[str, float]]:
-    repos = _get(f"/users/{user}/repos?per_page=100&type=owner")
+    repos = _all_repos(user)
     totals: dict[str, int] = {}
     for repo in repos:
         if repo.get("fork"):
