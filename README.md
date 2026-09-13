@@ -52,7 +52,7 @@ accountable for.
 | Project | Track | Progress | Current Status |
 |---|---|:---:|---|
 | [**42 Common Core**](https://github.com/TheVasconcelos/42-Python-CC) | Education | ▰▰▱▱▱▱▱▱▱▱ 19% | Milestone 2 |
-| **BSc Computer Engineering ** | Education | ▰▰▱▱▱▱▱▱▱▱ 20% | 2nd Semester |
+| **BSc Computer Engineering** | Education | ▰▰▱▱▱▱▱▱▱▱ 20% | 2nd Semester |
 <!-- BOARD:END -->
 
 ---
