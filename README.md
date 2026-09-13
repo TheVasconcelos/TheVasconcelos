@@ -59,18 +59,18 @@ accountable for.
 
 ## How to work with me
 
-**Written first.** If a decision isn't in the tracker, it didn't happen. Chat is for
-thinking out loud; Jira and Azure DevOps are for what we agreed.
+**Decisions belong in writing.** Chat is for thinking out loud. If we agreed on
+something, it goes in Jira or Azure.
 
 **Hybrid by default.** Iterative where iteration is safe, gated where it isn't.
-Regulated work doesn't get to be agile about validation, and that's fine — the two
-modes can run side by side if you're deliberate about the seam.
+Regulated work can't be agile about validation, and the two modes run side by side
+if you're deliberate about where they meet.
 
-**Traceability isn't bureaucracy.** Under MDR, a requirement with no trace isn't
-untidy, it's a finding. I'd rather spend an hour on the link than a week on the audit.
+**Traceability isn't optional.** Under MDR, an untraced requirement is a
+finding. Keeping the links current as we go costs less than reconstructing them later.
 
-**Early bad news beats late good news.** A slipped date surfaced in week two is a
-plan change. The same date surfaced in week six is a problem.
+**I'd rather hear bad news early.** A date that slips in week two is a plan change.
+The same date in week six is a problem.
 
-**I ask the obvious question.** I would rather look uninformed for thirty seconds
-than sign off on something I don't understand.
+**I'd rather hear bad news early.** There's almost always a way to absorb a slip
+if it surfaces early enough.
